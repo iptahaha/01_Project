@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <title>Team Dream</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
+<div class="content">
+    <!-- Tab -->
+    <ul class="nav" id="navigation">
+        <li class="nav-item">
+            <a class="tab-link active" href="#" id="defaultOpen" onclick="openTab(event, 'home')">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="tab-link" href="#" onclick="openTab(event, 'question')">Question</a>
+        </li>
+        <li class="nav-item">
+            <a class="tab-link" href="#" onclick="openTab(event, 'about')">About</a>
+        </li>
+    </ul>
+    <!-- Tab content -->
+    <div id="home" class="tab-content">
+        <h2>Home</h2>
+    </div>
 
+    <div id="question" class="tab-content" style="display:none">
+        <h2>Question</h2>
+    </div>
+
+    <div id="about" class="tab-content" style="display:none">
+        <h2>About</h2>
+    </div>
+</div>
 </body>
 </html>
