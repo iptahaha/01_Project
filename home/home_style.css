@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cards-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 8%;
+    padding: 8px;
+    height: auto;
+}
+
+.profile-image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 10;
+    border: 5px solid #eee;
+}
+
+.main-info{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+.card button{
+    width: 120px;
+    padding: 7px;
+    margin: 10px 0;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #eee;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}

@@ -1,6 +1,5 @@
 let tabContent = document.getElementsByClassName('tab-content');
 let tabLink = document.getElementsByClassName('tab-link');
-let link = document.querySelector('link[rel=import]');
 
 function openTab(ev, tabName) {
 
