@@ -1,0 +1,89 @@
+body,html{margin: 0; height:100%/*;font-family: "Andale Mono", monospace;*/}
+body{
+    background-size:cover;
+    background: white;
+    display:flex;
+    flex-direction:column;
+}
+
+.central {
+    text-align: center;
+}
+
+.go-shine {
+    color: white;
+    background: linear-gradient(to right, black 0, white 40%, black 60%) 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 15s infinite linear;
+}
+@keyframes shine{
+    0% {
+        background-position: 0;
+    }
+    80% {
+        background-position: 80em;
+    }
+    100% {
+        background-position: 100em;
+    }
+}
+.glow {
+    color: black;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px #0b510b, 0 0 4px #0b510b, 0 0 5px #0c6d0c, 0 0 6px #0c6d0c, 0 0 7px #0c6d0c;
+    }
+    to {
+        text-shadow: 0 0 10px white, 0 0 20px #1ccc19, 0 0 30px #1ccc19, 0 0 40px #1ccc19, 0 0 50px #1ccc19, 0 0 60px #1ccc19, 0 0 70px #1ccc19;
+    }
+}
+
+.text {
+    position: absolute;
+    /*width: 450px;*/
+    /*left: 50%;*/
+    /*margin-left: -225px;*/
+    /*height: 40px;*/
+    /*top: 50%;*/
+    /*margin-top: -20px;*/
+}
+
+p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.word {
+    position: absolute;
+    width: 500px;
+    opacity: 0;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
