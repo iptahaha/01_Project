@@ -1,0 +1,27 @@
+{
+  "name": "TestingDevelopers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.45.0"
+  },
+  "scripts": {
+    "cmd": "gulp",
+    "build": "yarn cmd default",
+    "watch": "yarn cmd watch"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.9"
+  },
+  "repository": "git+https://github.com/petriwna/01_Project.git",
+  "author": "DremTeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petriwna/01_Project/issues"
+  },
+  "homepage": "https://github.com/petriwna/01_Project#readme"
+}
