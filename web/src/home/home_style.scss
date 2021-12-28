@@ -1,52 +1,58 @@
-* {
-    margin: 0;
-    padding: 0;
+$white: #ffffff;
+$bg: #FAF7F2;
+
+body {
+  background: $white;
 }
 
-.cards-wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    flex-wrap: wrap;
+.content {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .card {
-    width: 280px;
-    background-color: #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 12px;
-    border-radius: 8%;
-    padding: 10px;
-    height: auto;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
-}
+  height: 255px;
+  width: 300px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: $bg;
+  margin: 25px;
+  transition: 0.4s;
+  padding: 10px;
 
-.profile-image{
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    z-index: 10;
-    border: 5px solid #eee;
-}
+  &:hover {
+    height: 440px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  }
 
-.main-info{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
+  &__img {
+    height: 200px;
+    width: 100%;
 
-.card button{
-    width: 120px;
-    padding: 7px;
-    margin: 10px 0;
-    background-color: tomato;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    color: #eee;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    &--avatar {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__top {
+    padding: 5px;
+
+    &--name {
+      font-weight: 600;
+      font-size: 25px;
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+  }
+  &:hover &__bottom{
+    opacity: 1;
+    visibility: visible;
+  }
 }
