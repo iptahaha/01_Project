@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./question.css">
+    <link rel="stylesheet" href="./project.css">
 
 </head>
 <body>
@@ -22,7 +22,87 @@
     </nav>
 </section>
 
+<header id="header" class="header lock-padding">
+    <a href="#popup" class="popup__link">QUESTION QI</a>
+</header>
+<div class="popup" id="popup">
+    <a href="#header" class="popup__area"></a>
+    <div class="popup__body"  action="#">
+        <div class="popup__content">
 
+            Question:
+            <br />
+            <input type="text" maxlength="255" id="question" class="popup__q">
+            <br />
+
+            Theme:
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li>
+                        <a href="" class="menu__link" >Select one theme</a>
+                        <ul class="sub-menu__list">
+                            <li>
+                                <a href="#" class="sub-menu__link">HTML</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">SCSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">JavaScript</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">GIT</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">Random Question</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <br />
+
+            Answer:
+            <p></p>
+            <section class="popup__answer">
+                <input type="radio" id="true" value="true" class="popup__answer-radio">
+                <span class="popup__answer-radioFake"></span>
+                <label for="true" class="popup__answer-label">True</label>
+                <input type="radio" id="false" value="false" class="popup__answer-radio">
+                <span class="popup__answer-radioFake"></span>
+                <label for="false" class="popup__answer-label">False</label>
+            </section>
+
+            <br />
+            File System:
+            <p></p>
+            <section class="popup__fileSystem">
+                <input type="checkbox" id="csv" class="popup__fileSystem-checkbox">
+                <span class="popup__fileSystem-checkboxFake"></span>
+                <label for="csv" class="popup__fileSystem-label">CSV</label>
+                <input type="checkbox" id="json" class="popup__fileSystem-checkbox">
+                <span class="popup__fileSystem-checkboxFake"></span>
+                <label for="json" class="popup__fileSystem-label">JSON</label>
+                <input type="checkbox" id="xml" class="popup__fileSystem-checkbox">
+                <span class="popup__fileSystem-checkboxFake"></span>
+                <label for="xml" class="popup__fileSystem-label">XML</label>
+                <input type="checkbox" id="yaml" class="popup__fileSystem-checkbox">
+                <span class="popup__fileSystem-checkboxFake"></span>
+                <label for="yaml" class="popup__fileSystem-label">YAML</label>
+            </section>
+
+            <br />
+            <section class="button">
+                <button class="button__cancel" id="cancel">Cancel</button>
+                <button class="button__create" type="submit" id="create" disabled>Create</button>
+            </section>
+            <a href="#" class="popup__close">X</a>
+            <script src="project.js"></script>
+        </div>
+    </div>
+</div>
 <script src="./question.js"></script>
 </body>
+
 </html>
