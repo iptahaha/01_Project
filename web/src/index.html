@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team Dream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="content">
+    <nav class="nav">
+        <a class="nav__link nav__link--img" href="#">
+            <img src="">
+        </a>
+        <a class="nav__link nav__link--active" href="#" id="defaultOpen" onclick="openTab(event, 'home')">Home</a>
+        <a class="nav__link" href="#" onclick="openTab(event, 'question')">Question</a>
+        <a class="nav__link nav__link--end" href="#" onclick="openTab(event, 'about')">About</a>
+    </nav>
+    <!-- Tab content -->
+    <iframe id="home" class="container" src="home/home.html">
+    </iframe>
+    <iframe id="question" class="container" style="display:none" src="question/question.html">
+    </iframe>
+    <iframe id="about" class="container" style="display:none" src="about/about.html">
+    </iframe>
+</section>
+<script src="index.js"></script>
+</body>
+</html>
