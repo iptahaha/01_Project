@@ -27,13 +27,13 @@ gulp.task('copy:js', function (cb){
 })
 
 gulp.task('copy:img', function (cb){
-    gulp.src('./web/src/**/*.png')
-        .pipe(gulp.dest('./dist'))
+   /* gulp.src('./web/src/!**!/!*.png')
+        .pipe(gulp.dest('./dist'))*/
     cb();
 })
 
 gulp.task('watch', function () {
-    gulp.watch(['./web/src/**/*.scss', './web/src/**/*.html', './web/src/**/*.js'], gulp.series(['clean', 'sass', 'copy:html', 'copy:js','copy:img']));
+    gulp.watch(['./web/src/**/*.scss', './web/src/**/*.html', './web/src/**/*.js'], gulp.series(['clean', 'sass', 'copy:html', 'copy:js', 'copy:img']));
 })
 
-gulp.task('default', gulp.series(['clean', 'sass', 'copy:html', 'copy:js','copy:img']))
+gulp.task('default', gulp.series(['clean', 'sass', 'copy:html', 'copy:js', 'copy:img']))

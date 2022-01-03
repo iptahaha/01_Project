@@ -9,6 +9,7 @@
   visibility: hidden;
   transition: all 0.8s ease 0s;
 
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -244,6 +245,8 @@ body {
         font-size: 16px;
         border: none;
         cursor: pointer;
+        position: relative;
+        z-index: 100;
       }
 
       &__dropbtn:hover, .dropbtn:focus {
@@ -256,18 +259,24 @@ body {
         background-color: #f1f1f1;
         min-width: 156px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+        z-index: 100;
       }
 
-      &__content a {
+      &__content li {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        cursor: pointer;
       }
 
-      &__content a:hover {
+      &__content li:hover {
         background-color: #ddd;
+        cursor: pointer;
+      }
+
+      &__content li.selected {
+        background-color: #7b7df9;
       }
     }
 
@@ -279,6 +288,17 @@ body {
   &__question-list {
     background-color: #7b7df9;
   }
-
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+
+  &.show {
+    display: block;
+  }
+}
