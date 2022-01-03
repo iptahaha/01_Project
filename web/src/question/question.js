@@ -11,12 +11,24 @@ function dropMenuSelectQuestion() {
 const fileSystem = window.localStorage.getItem('file-system') || 'fs-json';
 document.getElementById(fileSystem).classList.add('selected');
 
+const fileTopic = window.localStorage.getItem('file-topic') || 'qu4';
+document.getElementById(fileTopic).classList.add('selected');
+
 
 function selectFileSystem(selectedItem) {
     window.localStorage.setItem('file-system', selectedItem);
     document.querySelector('#selectFile>.selected').classList.remove('selected');
     document.getElementById(selectedItem).classList.add('selected');
 }
+
+
+
+function selectFileTopic(selectedItem) {
+    window.localStorage.setItem('file-topic', selectedItem);
+    document.querySelector('#selectQuestion>.selected').classList.remove('selected');
+    document.getElementById(selectedItem).classList.add('selected');
+}
+
 
 
 function closeDropDown () {

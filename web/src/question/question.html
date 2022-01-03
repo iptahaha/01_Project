@@ -10,9 +10,6 @@
 
 </head>
 <body>
-<header id="header" class="header lock-padding">
-    <a href="#popup" class="popup__link">QUESTION QI</a>
-</header>
 <section class="question">
     <div class="question__main">
         <div class="dropdown">
@@ -27,23 +24,22 @@
         <div class="dropdown">
             <button onclick="dropMenuSelectQuestion()" class="dropdown__dropbtn">Select question topic</button>
             <ul id="selectQuestion" class="dropdown__content">
-                <li onclick="selectFileTopic()">тесты по администрированию</li>
-                <li>тесты по программированию</li>
-                <li>тесты по базам данных</li>
-                <li>тесты по веб-технологиям</li>
-                <li>тесты по управлению проектами</li>
+                <li onclick="selectFileTopic('qu1')" id="qu1">тесты по администрированию</li>
+                <li onclick="selectFileTopic('qu2')" id="qu2">тесты по программированию</li>
+                <li onclick="selectFileTopic('qu3')" id="qu3">тесты по базам данных</li>
+                <li onclick="selectFileTopic('qu4')" id="qu4">тесты по веб-технологиям</li>
+                <li onclick="selectFileTopic('qu5')" id="qu5">тесты по управлению проектами</li>
             </ul>
         </div>
-        <a href="#">add
+        <a href="#popup" class="popup__link">add img</a>
         </a>
-        <div class="question__question-list">
-
+        <div class=".question-list">
+fdsddshdhgshgfhgfh
         </div>
     </div>
 </section>
 
-<div class="overlay" id="overlay" onclick="closeDropDown()">
-</div>
+<div class="overlay" id="overlay" onclick="closeDropDown()"></div>
 
 <div class="popup" id="popup">
     <a href="#header" class="popup__area"></a>
