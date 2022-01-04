@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
 <section class="question">
     <div class="question__main">
         <div class="dropdown">
@@ -36,6 +37,7 @@
 
     </div>
 </section>
+
 
 <div class="overlay" id="overlay" onclick="closeDropDown()"></div>
 
@@ -76,46 +78,16 @@
             </nav>
 
 
-            Question:
-            <br />
-            <input type="text" maxlength="255" id="question" class="popup__q">
-            <br />
-
-            Theme:
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li>
-                        <a href="" class="menu__link" >Select one theme</a>
-                        <ul class="sub-menu__list">
-                            <li>
-                                <a href="#" class="sub-menu__link">HTML</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sub-menu__link">SCSS</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sub-menu__link">JavaScript</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sub-menu__link">GIT</a>
-                            </li>
-                            <li>
-                                <a href="#" class="sub-menu__link">Random Question</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-
             <br />
 
             Answer:
             <p></p>
             <section class="popup__answer">
-                <input type="radio" id="true" value="true" class="popup__answer-radio">
+
+                <input type="radio"  id="true" value="true" class="popup__answer-radio">
                 <span class="popup__answer-radioFake"></span>
                 <label for="true" class="popup__answer-label">True</label>
-                <input type="radio" id="false" value="false" class="popup__answer-radio">
+                <input type="radio"  id="false" value="false" class="popup__answer-radio">
                 <span class="popup__answer-radioFake"></span>
                 <label for="false" class="popup__answer-label">False</label>
             </section>
@@ -124,6 +96,7 @@
             File System:
             <p></p>
             <section class="popup__fileSystem">
+
                 <input type="checkbox" name="fileSystem"  id="csv" class="popup__fileSystem-checkbox">
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="csv" class="popup__fileSystem-label">CSV</label>
@@ -134,6 +107,7 @@
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="xml" class="popup__fileSystem-label">XML</label>
                 <input type="checkbox" name="fileSystem" id="yaml" class="popup__fileSystem-checkbox">
+
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="yaml" class="popup__fileSystem-label">YAML</label>
             </section>
@@ -150,4 +124,6 @@
 </div>
 <script src="./question.js"></script>
 </body>
+
 </html>
+
