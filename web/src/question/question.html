@@ -10,7 +10,70 @@
 
 </head>
 <body>
+<section class="question">
+    <div class="question__main">
+        <div class="dropdown">
+            <button onclick="dropMenuSelectFile()" class="dropdown__dropbtn">Select file system</button>
+            <ul id="selectFile" class="dropdown__content">
+                <li onclick="selectFileSystem('fs-csv')" id="fs-csv">CSV</li>
+                <li onclick="selectFileSystem('fs-json')" id="fs-json">JSON</li>
+                <li onclick="selectFileSystem('fs-xml')" id="fs-xml">XML</li>
+                <li onclick="selectFileSystem('fs-yaml')" id="fs-yaml">YAML</li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button onclick="dropMenuSelectQuestion()" class="dropdown__dropbtn">Select question topic</button>
+            <ul id="selectQuestion" class="dropdown__content">
+                <li onclick="selectFileTopic('qu1')" id="qu1">тесты по администрированию</li>
+                <li onclick="selectFileTopic('qu2')" id="qu2">тесты по программированию</li>
+                <li onclick="selectFileTopic('qu3')" id="qu3">тесты по базам данных</li>
+                <li onclick="selectFileTopic('qu4')" id="qu4">тесты по веб-технологиям</li>
+                <li onclick="selectFileTopic('qu5')" id="qu5">тесты по управлению проектами</li>
+            </ul>
+        </div>
+        <a href="#popup" class="popup__link">add img</a>
+        </a>
 
+    </div>
+</section>
+
+<div class="overlay" id="overlay" onclick="closeDropDown()"></div>
+
+<div class="popup" id="popup">
+    <a href="#header" class="popup__area"></a>
+    <div class="popup__body"  action="#">
+        <div class="popup__content">
+
+            Question:
+            <br />
+            <input type="text" maxlength="255" id="question" class="popup__q">
+            <br />
+
+            Theme:
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li>
+                        <a href="" class="menu__link" >Select one theme</a>
+                        <ul class="sub-menu__list">
+                            <li>
+                                <a href="#" class="sub-menu__link">HTML</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">SCSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">JavaScript</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">GIT</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">Random Question</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
 
 
             Question:
@@ -49,10 +112,10 @@
             Answer:
             <p></p>
             <section class="popup__answer">
-                <input type="radio" name="answer" id="true" value="true" class="popup__answer-radio">
+                <input type="radio" id="true" value="true" class="popup__answer-radio">
                 <span class="popup__answer-radioFake"></span>
                 <label for="true" class="popup__answer-label">True</label>
-                <input type="radio" name="answer" id="false" value="false" class="popup__answer-radio">
+                <input type="radio" id="false" value="false" class="popup__answer-radio">
                 <span class="popup__answer-radioFake"></span>
                 <label for="false" class="popup__answer-label">False</label>
             </section>
