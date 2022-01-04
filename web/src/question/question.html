@@ -11,20 +11,34 @@
 </head>
 <body>
 <section class="question">
-    <header class="question__header">
-        <img src="" class="header__logo">
-        <h3 class="header__title">Dream Team</h3>
-    </header>
-    <nav class="question__navigate">
-        <button class="add">
-            <img src="#">
-        </button>
-    </nav>
+    <div class="question__main">
+        <div class="dropdown">
+            <button onclick="dropMenuSelectFile()" class="dropdown__dropbtn">Select file system</button>
+            <ul id="selectFile" class="dropdown__content">
+                <li onclick="selectFileSystem('fs-csv')" id="fs-csv">CSV</li>
+                <li onclick="selectFileSystem('fs-json')" id="fs-json">JSON</li>
+                <li onclick="selectFileSystem('fs-xml')" id="fs-xml">XML</li>
+                <li onclick="selectFileSystem('fs-yaml')" id="fs-yaml">YAML</li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button onclick="dropMenuSelectQuestion()" class="dropdown__dropbtn">Select question topic</button>
+            <ul id="selectQuestion" class="dropdown__content">
+                <li onclick="selectFileTopic('qu1')" id="qu1">тесты по администрированию</li>
+                <li onclick="selectFileTopic('qu2')" id="qu2">тесты по программированию</li>
+                <li onclick="selectFileTopic('qu3')" id="qu3">тесты по базам данных</li>
+                <li onclick="selectFileTopic('qu4')" id="qu4">тесты по веб-технологиям</li>
+                <li onclick="selectFileTopic('qu5')" id="qu5">тесты по управлению проектами</li>
+            </ul>
+        </div>
+        <a href="#popup" class="popup__link">add img</a>
+        </a>
+
+    </div>
 </section>
 
-<header id="header" class="header lock-padding">
-    <a href="#popup" class="popup__link">QUESTION QI</a>
-</header>
+<div class="overlay" id="overlay" onclick="closeDropDown()"></div>
+
 <div class="popup" id="popup">
     <a href="#header" class="popup__area"></a>
     <div class="popup__body"  action="#">

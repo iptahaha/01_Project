@@ -9,6 +9,7 @@
   visibility: hidden;
   transition: all 0.8s ease 0s;
 
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -221,3 +222,87 @@
   }
 }
 
+body {
+  background-color: #E5E5E5;
+}
+.question {
+  width: 100%;
+  background-color: #BFB5AF;
+
+  &__main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      &__dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+      }
+
+      &__dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+
+      &__content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 156px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 100;
+      }
+
+      &__content li {
+        min-width: 156px;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+      }
+
+      &__content li:hover {
+        background-color: #ddd;
+        cursor: pointer;
+      }
+
+      &__content li.selected {
+        background-color: #7b7df9;
+      }
+    }
+
+    .show {
+      display:block;
+    }
+  }
+
+
+}
+.question-list {
+   background-color: #7b7df9;
+   border: 1px solid black;
+ }
+
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+
+  &.show {
+    display: block;
+  }
+}
