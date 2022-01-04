@@ -75,6 +75,38 @@
                 </ul>
             </nav>
 
+
+            Question:
+            <br />
+            <input type="text" maxlength="255" id="question" class="popup__q">
+            <br />
+
+            Theme:
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li>
+                        <a href="" class="menu__link" >Select one theme</a>
+                        <ul class="sub-menu__list">
+                            <li>
+                                <a href="#" class="sub-menu__link">HTML</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">SCSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">JavaScript</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">GIT</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sub-menu__link">Random Question</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
             <br />
 
             Answer:
@@ -92,16 +124,16 @@
             File System:
             <p></p>
             <section class="popup__fileSystem">
-                <input type="checkbox" id="csv" class="popup__fileSystem-checkbox">
+                <input type="checkbox" name="fileSystem"  id="csv" class="popup__fileSystem-checkbox">
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="csv" class="popup__fileSystem-label">CSV</label>
-                <input type="checkbox" id="json" class="popup__fileSystem-checkbox">
+                <input type="checkbox" name="fileSystem" id="json" checked class="popup__fileSystem-checkbox">
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="json" class="popup__fileSystem-label">JSON</label>
-                <input type="checkbox" id="xml" class="popup__fileSystem-checkbox">
+                <input type="checkbox" name="fileSystem" id="xml" class="popup__fileSystem-checkbox">
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="xml" class="popup__fileSystem-label">XML</label>
-                <input type="checkbox" id="yaml" class="popup__fileSystem-checkbox">
+                <input type="checkbox" name="fileSystem" id="yaml" class="popup__fileSystem-checkbox">
                 <span class="popup__fileSystem-checkboxFake"></span>
                 <label for="yaml" class="popup__fileSystem-label">YAML</label>
             </section>
@@ -118,5 +150,4 @@
 </div>
 <script src="./question.js"></script>
 </body>
-
 </html>
