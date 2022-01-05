@@ -27,8 +27,8 @@ gulp.task('copy:js', function (cb){
 })
 
 gulp.task('copy:img', function (cb){
-   /* gulp.src('./web/src/!**!/!*.png')
-        .pipe(gulp.dest('./dist'))*/
+    gulp.src('./web/src/images/*.*')
+        .pipe(gulp.dest('./dist/images'))
     cb();
 })
 
