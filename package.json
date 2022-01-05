@@ -5,17 +5,22 @@
   "main": "src/index.js",
   "dependencies": {
     "del": "^6.0.0",
+    "express": "^4.17.2",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "sass": "^1.45.0"
   },
   "scripts": {
+    "start": "node server/routing.js",
+    "dev": "nodemon server/routing.js",
     "cmd": "gulp",
     "build": "yarn cmd default",
     "watch": "yarn cmd watch"
   },
   "devDependencies": {
-    "@types/gulp": "^4.0.9"
+    "@types/gulp": "^4.0.9",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
   },
   "repository": "git+https://github.com/petriwna/01_Project.git",
   "author": "DremTeam",
