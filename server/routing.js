@@ -1,57 +1,89 @@
 const express = require('express');
-const { path } = require('express/lib/application');
-
 const app = express();
 const port = 3999;
+const urlencodedParser = express.urlencoded({ extended: false });
 
+const fs = require('fs');
 
-const options = {
-    root: "./".concat('dist')
-}
-
+app.use(express.static('dist'))
 app.listen(port, () => console.log("Сервер запущен..."));
 
-app.get('/main', (req, res) => {
-    res.sendFile('/index.html', options)
-})
-app.get('/style.css', (req, res) => {
-    res.sendFile('/style.css', options)
-})
-app.get('/index.js', (req, res) => {
-    res.sendFile('/index.js', options)
+
+/*app.post("/question-create", urlencodedParser, function (request, response) {
+    let arr = [];
+    if (typeof request.body.fileSystem === 'string') {
+        arr = [request.body.fileSystem];
+    }
+    else {
+        arr = request.body.fileSystem; 
+    }
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++)
+     {
+        switch (arr[i]) {
+            case 'CSV':
+                addCSV(request.body.question, request.body.selectTheme, request.body.select_answer);
+                break;
+            case 'JSON':
+                addJSON(request.body.question, request.body.selectTheme, request.body.select_answer);
+                break;
+            case 'XML':
+                addXML(request.body.question, request.body.selectTheme, request.body.select_answer);
+                break;
+            case 'YAML':
+                addYAML(request.body.question, request.body.selectTheme, request.body.select_answer);
+                break
+        }
+    }
 })
 
-app.get('/home/home.html', (req, res) => {
-    res.sendFile('/home/home.html', options)
-})
-app.get('/home/home_style.css', (req, res) => {
-    res.sendFile('/home/home_style.css', options)
-})
-app.get('/home/home.js', (req, res) => {
-    res.sendFile('/home/home.js', options)
-})
+function addCSV(question, theme, answer) {
+    console.log('csv');
+    console.log(question);
+    console.log(theme);
+    console.log(answer);
+}
 
+function addJSON(quest, theme, answer) {
+    let info = {
+        quest: quest,
+        theme: theme,
+        answer: answer
+    };
 
-app.get('/question/question.html', (req, res) => {;
-    res.sendFile('/question/question.html', options)
-})
-app.get('/question/question.css', (req, res) => {
-    res.sendFile('/question/question.css', options)
-})
-app.get('/question/question.js', (req, res) => {
-    res.sendFile('/question/question.js', options)
-})
+    var tmpJson = fs.readFileSync('./server/questions.json');
 
-app.get('/about/about.html', (req, res) => {;
-    res.sendFile('/about/about.html', options)
-})
-app.get('/about/about.css', (req, res) => {
-    res.sendFile('/about/about.css', options)
-})
-app.get('/about/about.js', (req, res) => {
-    res.sendFile('/about/about.js', options)
-})
+    if (Object.keys(tmpJson).length === 0) {
+        var jsonQuestion = JSON.stringify([info]);
+        fs.writeFileSync('./server/questions.json', jsonQuestion);
+    } 
+    else { 
+        let tmp = [];
+        let tmp2 = []; 
+        tmp = JSON.parse(tmpJson);
+        tmp2 = tmp;
+        tmp2.push(info);
+        console.log(tmp2);
+        var jsonQuestion = JSON.stringify(tmp2, null, '\t');
+        fs.writeFileSync('./server/questions.json', jsonQuestion);
+    }
+}
 
+ 
+
+function addXML(question, theme, answer) {
+    console.log('xml');
+    console.log(question);
+    console.log(theme);
+    console.log(answer);
+}
+
+function addYAML(question, theme, answer) {
+    console.log('yaml');
+    console.log(question);
+    console.log(theme);
+    console.log(answer);
+}*/
 
 
 
